@@ -1,0 +1,32 @@
+/*
+    note: 第一页
+    rewrite: zx
+*/
+
+.titleContent,.timelineContent{
+    position: relative;
+}
+
+.timelineContent,.founderIntro{
+    position: relative;
+}
+
+.founderIntro {
+    /* top: 0.6rem; */
+    left: 50%;
+    margin-left: -4.27rem;
+    background: url(../../img/p1/intro.png) top center no-repeat;
+    background-size: 100% 100%;
+    width: 8.55rem;
+    height: 1.21rem; 
+}
+
+.founderIntro {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    transform-origin: center center;
+    -webkit-transform-origin: center center;
+    animation: zoomIn 0.8s 1.2s forwards;
+    -webkit-animation: zoomIn 0.8s 1.2s forwards; 
+}
+

@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    word-wrap: break-word; 
+}
+  
+html {
+    position: relative;
+    overflow-x: hidden;
+    -ms-overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-y: scroll;
+    width: 100.89332632685%;
+    min-width: 1300px; 
+}
+  
+body {
+    font: 14px "Microsoft YaHei", "Arial" !important;
+    width: 100%;
+    height: 100%;
+    background-color: #b60402;
+    overflow: hidden; 
+}
