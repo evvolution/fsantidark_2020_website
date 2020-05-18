@@ -3,16 +3,77 @@
     rewrite: zx
 */
 
-.titleContent,.timelineContent{
-    position: relative;
+.pageOne{
+    text-align: center;
+}
+
+.titleContent {
+    /* border: 1px solid #000; */
+    position: absolute; 
+    left: 50%; 
+    top: 35%;
+    transform: translate(-30%, -30%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.titleContent img {
+    width: 100%;
+}
+
+.flashContent {
+    position: absolute;
+    -webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-name:breathe;
+	-webkit-animation-duration:2700ms;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:alternate;
+}
+
+.flash_left {
+    position: absolute;
+    left: 0;
+    top: 90px;
+    z-index: -1;
+}
+
+.flash_middle {
+    position: absolute;
+    left: 43%;
+    top: 0px;
+    z-index: -1;
+}
+
+.flash_right {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    z-index: -1;
 }
 
 .timelineContent,.founderIntro{
-    position: relative;
+    position: absolute;
+}
+
+.timelineContent {
+    left: 50%;
+}
+
+.filmback {
+    position: absolute;
+    background: url(../../img/p1/film.png) top center no-repeat;
+    background-size: 100% 100%;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-30%, -30%);
+    -webkit-transform: translate(-50%, -20%);
+    width: 15rem;
+    height: 6rem;
 }
 
 .founderIntro {
-    /* top: 0.6rem; */
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
     left: 50%;
     margin-left: -4.27rem;
     background: url(../../img/p1/intro.png) top center no-repeat;
@@ -21,12 +82,20 @@
     height: 1.21rem; 
 }
 
-.founderIntro {
+/* .founderIntro {
     transform: scale(0);
     -webkit-transform: scale(0);
     transform-origin: center center;
     -webkit-transform-origin: center center;
     animation: zoomIn 0.8s 1.2s forwards;
     -webkit-animation: zoomIn 0.8s 1.2s forwards; 
-}
+} */
 
+@-webkit-keyframes breathe {
+	0% {
+	    opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,54 @@
+/*
+    note: 第二页样式
+    rewrite: zx
+*/
+
+.pageTwo {
+    text-align: center;
+    width: 100%;
+}
+
+.mainforp2 {
+    position: absolute; 
+    left: 50%; 
+    top: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,0.1);
+    padding: 50px;
+    /* border: 1px solid #000; */
+}
+
+.lefttitleforp2 {
+    position: absolute;
+}
+
+.leftmemo {
+    position: absolute;
+    bottom: 18%;
+    width: 40%;
+    font-size: 20px;
+    line-height: 40px;
+    color: #dfdfdf;
+    text-align: justify;
+}
+
+.moreintroforp2 {
+    padding: 10px;
+    background-color: #ffc14d;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 22px;
+    width: 150px;
+    position: absolute;
+    bottom: 5%;
+    cursor: pointer;
+}
+
+.righttitleforp2 {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+}

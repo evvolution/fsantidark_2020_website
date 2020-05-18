@@ -12,17 +12,39 @@
     <link rel="stylesheet" type="text/css" href="control/css/basic.css">
     <link rel="stylesheet" type="text/css" href="control/css/timeline.css">
     <link rel="stylesheet" type="text/css" href="control/css/p1.css">
+    <link rel="stylesheet" type="text/css" href="control/css/p2.css">
+    <link rel="stylesheet" type="text/css" href="control/css/p3.css">
 
 </head>
 
 <body>
     <div class="container-fluid">
+        <ul class="fsnav" id="fsantidarkMenu">
+            <div class="goldenborder"></div>
+            <li><img src="img/basic/MENU.png"/></li>
+            <li data-menuanchor="p1" class="menulist"><a href="#p1">专题首页</a></li>
+            <li data-menuanchor="p2" class="menulist"><a href="#p2">大赛简介</a></li>
+            <li data-menuanchor="p3" class="menulist"><a href="#p3">我要报名</a></li>
+            <li data-menuanchor="p4" class="menulist"><a href="#p4">新闻动态</a></li>
+            <li data-menuanchor="p5" class="menulist"><a href="#p5">作品展示</a></li>
+        </ul>
         <div id="fullpage">
-            <div class="section">
+            <div class="section pageOne">
                 <div class="titleContent">
                     <img src="img/p1/title.png" />
+                    <div class="flashContent flash_left">
+                        <img src="img/p1/flash.png" />
+                    </div>
+                    <div class="flashContent flash_middle">
+                        <img src="img/p1/flash.png" />
+                    </div>
+                    <div class="flashContent flash_right">
+                        <img src="img/p1/flash.png" />
+                    </div>
                 </div>
                 <div class="timelineContent">
+                    <div class="filmback"></div>
+
                     <!-- 线条图片div -->
                     <div class="line_left"></div>
                     <div class="line_middle"></div>
@@ -38,9 +60,31 @@
                 <div class="founderContent">
                     <div class="founderIntro"></div>
                 </div>
-
             </div>
-            <div class="section">Some section</div>
+            <div class="section pageTwo">
+                <div class="mainforp2">
+                    <div class="lefttitleforp2">
+                        <img src="img/p2/p2title.png">                        
+                    </div>
+                    <div class="leftmemo">
+                        以“扫黑除恶治乱、共建平安佛山”为主题，通过微视频、微电影、微动漫的形式，结合“扫黑除恶”“平安”“佛山特色”等核心元素，进行微视频、微电影、微动漫创作制作，本次大赛鼓励参赛作品展现佛山扫黑除恶三年专项斗争以来的变化，期间涌现的英雄事迹与人物故事，深入挖掘黑恶乱典型案例形成法治公开课、犯罪警示课，既反映官方声音、一线干警声音，也反映群众声音，弘扬社会正气。
+                    </div>
+                    <div class="moreintroforp2" onclick=formorebyPDF()>查看更多</div>
+                    <div class="righttitleforp2">
+                        <img src="img/p2/p2videotitle.png">
+                    </div>
+                    <div class="videoforp2">
+
+                    </div>
+                </div>
+            </div>
+            <div class="section pageThree">
+                <div class="mainforp3">
+                    <div class="righttitleforp3">
+                        <img src="img/p2/p2videotitle.png">
+                    </div>
+                </div>
+            </div>
             <div class="section">Some section</div>
             <div class="section">Some section</div>
         </div>
@@ -49,10 +93,9 @@
 
     <script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="plugins/bootstrap/bootstrap.min.js"></script>
-    <!-- <script type="text/javascript" src="plugins/bootstrap/popper.min.js"></script> -->
     <script type="text/javascript" src="plugins/fullpage/fullpage.min.js"></script>
+    <script type="text/javascript" src="control/js/common.js"></script>
     <script type="text/javascript" src="control/js/viewinit.js"></script>
+    <script type="text/javascript" src="control/js/p2.js"></script>
 </body>
-
-
 </html>

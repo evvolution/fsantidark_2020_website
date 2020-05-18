@@ -1,12 +1,15 @@
-$(document).ready(function() {
-    initMainview()
-    initSize();
-});
+
+/*
+    note：页面初始化
+    anthor：zx
+*/
 
 function initMainview(){
     $('#fullpage').fullpage({
-        navigation: true,//是否显示导航，默认为false
-		navigationPosition: 'right',//导航小圆点的位置
+        navigation: true,
+        navigationPosition: 'right',
+        anchors: ['p1', 'p2', 'p3', 'p4', 'p5'],
+        menu: '#fsantidarkMenu'
     });
 }
 
@@ -18,7 +21,7 @@ function initSize(){
         $("body").css({height: winHeight});
     }
     else{
-        $("html").css({fontSize: 1300 / 1920 * 100 + "px"});
-        $("body").css({height: 639+"px"});
+        // $("html").css({fontSize: 1300 / 1920 * 100 + "px"});
+        // $("body").css({height: 639+"px"});
     }
 }
