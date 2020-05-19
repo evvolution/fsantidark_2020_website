@@ -1,6 +1,6 @@
 /*
-    note: 第二页样式
-    rewrite: zxThree
+    note: 第三页样式
+    write: zx
 */
 
 .pageThree {
@@ -13,17 +13,43 @@
     left: 50%; 
     top: 50%;
     width: 80%;
-    height: 80%;
+    height: 85%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     background-color: rgba(255,255,255,0.1);
-    /* float: left; */
     padding: 50px;
-    /* border: 1px solid #000; */
 }
 
-.righttitleforp3 {
+.p3row {
+    margin-bottom: 2vw;
+}
+
+.guideforp3 {
     position: absolute;
-    top: 50px;
-    right: 50px;
+    bottom: 10%;
+    width: 25%;
+    height: 40%;
+    background-color: #efe5e5;
+    z-index: 10;
+    box-shadow: 5px -5px 5px #717171;
+    padding: 20px 20px;
+}
+
+.guidetitleforp3 {
+    text-align: justify;
+    font-size: 1vw;
+    color: #333232;
+}
+
+.guidecontentforp3 {
+    font-size: 0.8vw;
+    text-align: justify;
+}
+
+.guidetitleforp3, .guidecontentforp3 {
+    margin-bottom: 10px !important;
+}
+
+.stepsforinfo {
+    background-color: #eee0df;
 }

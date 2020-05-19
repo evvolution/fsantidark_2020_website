@@ -1,0 +1,27 @@
+/*
+    note: 第四页样式
+    write: zx
+*/
+
+.pagefour {
+    text-align: center;
+    width: 100%;
+}
+
+.mainforp4 {
+    position: absolute; 
+    left: 50%; 
+    top: 50%;
+    width: 80%;
+    height: 85%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,0.1);
+    /* float: left; */
+    padding: 50px;
+    text-align: center;
+}
+
+.p4row {
+    margin-bottom: 2vw;
+}
