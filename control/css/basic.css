@@ -29,6 +29,38 @@ body {
     background-size:100%;
 }
 
+.form-control,.btn {
+    font-size: 0.8vw;
+    padding: 10px;
+    height: 2.5vw;
+    border-radius: 10px;
+    border: 0;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.btn:focus {
+    color: #495057;
+    /* background-color: #fff; */
+    outline: 0;
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
+    border-color: #dc3545;
+    outline: 0;
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active {
+    background-color: #c90f19 !important;
+}
+
 .commonpicfortitle {
     width: 100%
 }

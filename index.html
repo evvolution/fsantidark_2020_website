@@ -9,6 +9,9 @@
     <meta name="referrer" content="never">
     <link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="plugins/fullpage/fullpage.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/fileinput/fileinput.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/litestep/step.css">
+
     <link rel="stylesheet" type="text/css" href="control/css/basic.css">
     <link rel="stylesheet" type="text/css" href="control/css/timeline.css">
     <link rel="stylesheet" type="text/css" href="control/css/p1.css">
@@ -105,7 +108,137 @@
                             <img class="commonpicfortitle" src="img/p3/03.png">
                         </div>
                         <div class="col-lg-10 stepsforinfo">
-                            1
+                            <div class="row p3rowlevel2">
+                                <div class="col-lg-12">
+                                    
+                                </div>
+                            </div>
+                            <div class="row p3rowlevel2">
+                                <div class="container">
+                                    <div class="row p3rowlevel3">
+                                        <p class="reqtitleinp3">参赛作品要求</p>
+                                    </div>
+                                    <div class="row p3rowlevel3">
+                                        <p class="reqintroinp3">在2020年8月之前完成的原创作品，微视频、微动漫作品时间在5分钟以内，作品上传格式为mov、mp4、mpeg格式。</p>
+                                    </div>
+                                    <div class="row p3rowlevel3">
+                                        <div id="step"></div>
+                                    </div>
+                                    <div class="row p3rowlevel3">
+                                        <div class="col-lg-6 offset-lg-3">
+                                            <div class="liteswitch boxTxt">
+                                                <div class="box">
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col-md-3 infolabel">作品名称: </div>
+                                                        <div class="col-md-9"><input class="infotypein" value="" id="prjname"/></div>
+                                                    </div>
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col-md-3 infolabel">上传作品: </div>
+                                                        <div class="col-md-9"><input id="prjvideo" type="file" /></div>
+                                                    </div>
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col-md-3 infolabel">视频类型: </div>
+                                                        <div class="col-md-9 prjtypeContent">
+                                                            <div class="row p3rowlevel5">
+                                                                <div class="col-md prjtype">
+                                                                    <input checked class="prjtyperadio" type="radio" name="prjtype" id="prjtype1" value="1">&nbsp;<label class="labelprjtype" for="prjtype1">微视频</label>
+                                                                </div>
+                                                                <div class="col-md prjtype">
+                                                                    <input class="prjtyperadio" type="radio" name="prjtype" id="prjtype2" value="2">&nbsp;<label class="labelprjtype" for="prjtype2">微电影</label>
+                                                                </div>
+                                                                <div class="col-md prjtype">
+                                                                    <input class="prjtyperadio" type="radio" name="prjtype" id="prjtype3" value="3">&nbsp;<label class="labelprjtype" for="prjtype3">微动漫</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col-md-3 infolabel">上传剧照: </div>
+                                                        <div class="col-md-9"><input id="prjcover" type="file" /></div>
+                                                    </div>
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col"></div>
+                                                        <div class="col">
+                                                            <div class="preandnext" onclick=stepnext()>下一步 ></div>
+                                                        </div>
+                                                        <div class="col"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col-md-3 infolabel">报送单位: </div>
+                                                        <div class="col-md-9"><input class="infotypein" value="" id="prjbelong"/></div>
+                                                    </div>
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col-md-3 infolabel">联系人: </div>
+                                                        <div class="col-md-9"><input class="infotypein" value="" id="prjcontact"/></div>
+                                                    </div>
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col-md-3 infolabel">联系方式: </div>
+                                                        <div class="col-md-9"><input class="infotypein" value="" id="prjphone"/></div>
+                                                    </div>
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col"></div>
+                                                        <div class="col">
+                                                            <div class="preandnext" onclick=steppre()>< 上一步</div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="preandnext" onclick=stepnext()>下一步 ></div>
+                                                        </div>
+                                                        <div class="col"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col-md-3 infolabel">导演: </div>
+                                                        <div class="col-md-9"><input class="infotypein" value="" id="prjdirector"/></div>
+                                                    </div>
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col-md-3 infolabel">编剧: </div>
+                                                        <div class="col-md-9"><input class="infotypein" value="" id="prjwriter"/></div>
+                                                    </div>
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col-md-3 infolabel">摄像: </div>
+                                                        <div class="col-md-9"><input class="infotypein" value="" id="prjwriter"/></div>
+                                                    </div>
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col-md-3 infolabel">剪辑: </div>
+                                                        <div class="col-md-9"><input class="infotypein" value="" id="prjredeal"/></div>
+                                                    </div>
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col"></div>
+                                                        <div class="col">
+                                                            <div class="preandnext" onclick=steppre()>< 上一步</div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="preandnext" onclick=stepnext()>下一步 ></div>
+                                                        </div>
+                                                        <div class="col"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="box">
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col-md-3 infolabel">演员: </div>
+                                                        <div class="col-md-9"><input class="infotypein" value="" id="prjactor"/></div>
+                                                    </div>
+                                                    <div class="row p3rowlevel4">
+                                                        <div class="col"></div>
+                                                        <div class="col">
+                                                            <div class="preandnext" onclick=steppre()>< 上一步</div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="moreintroforp2">提交</div>
+                                                        </div>
+                                                        <div class="col"></div>
+                                                    </div>
+                                                </div>       
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -159,8 +292,14 @@
     <script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="plugins/bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" src="plugins/fullpage/fullpage.min.js"></script>
+    <script type="text/javascript" src="plugins/fileinput/fileinput.min.js"></script>
+    <script type="text/javascript" src="plugins/fileinput/zh.js"></script>
+    <script type="text/javascript" src="plugins/liteswitch/liteswitch.min.js"></script>
+    <script type="text/javascript" src="plugins/litestep/step.js"></script>
+
     <script type="text/javascript" src="control/js/common.js"></script>
     <script type="text/javascript" src="control/js/viewinit.js"></script>
     <script type="text/javascript" src="control/js/p2.js"></script>
+    <script type="text/javascript" src="control/js/p3.js"></script>
 </body>
 </html>
