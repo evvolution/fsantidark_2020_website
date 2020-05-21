@@ -6,6 +6,7 @@
 
 
 var step = $("#step");
+var commonlink = 'http://server.foshanplus.com/';
 
 $(document).ready(function() {
     initMainview()
