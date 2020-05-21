@@ -157,7 +157,7 @@
                                                         <div class="row p3rowlevel4">
                                                             <div class="col"></div>
                                                             <div class="col">
-                                                                <div class="preandnext" onclick=stepnext()>下一步 →</div>
+                                                                <div class="preandnext" onclick=stepnext_1to2()>下一步 →</div>
                                                             </div>
                                                             <div class="col"></div>
                                                         </div>
@@ -182,7 +182,7 @@
                                                                 <div class="preandnext" onclick=steppre()>← 上一步</div>
                                                             </div>
                                                             <div class="col">
-                                                                <div class="preandnext" onclick=stepnext()>下一步 →</div>
+                                                                <div class="preandnext" onclick=stepnext_2to3()>下一步 →</div>
                                                             </div>
                                                             <div class="col"></div>
                                                         </div>
@@ -211,7 +211,7 @@
                                                                 <div class="preandnext" onclick=steppre()>← 上一步</div>
                                                             </div>
                                                             <div class="col">
-                                                                <div class="preandnext" onclick=stepnext()>下一步 →</div>
+                                                                <div class="preandnext" onclick=stepnext_3to4()>下一步 →</div>
                                                             </div>
                                                             <div class="col"></div>
                                                         </div>
@@ -226,12 +226,14 @@
                                                         <div class="row p3rowlevel4">
                                                             <div class="col-md-5 infolabel">
                                                                 <div class="showmodal" data-toggle="modal" data-target="#prjmainmodal">作品梗概</div>
+                                                                <div class="finalsubmitted" style="display: none;">作品梗概</div>
                                                             </div>
                                                             <div class="shorttext col-md-7"><input class="infotypeNone" name="content_500" id="shortprjmain" readonly value="您还没有提交作品梗概"/></div>
                                                         </div>
                                                         <div class="row p3rowlevel4">
                                                             <div class="col-md-5 infolabel">
                                                                 <div class="showmodal" data-toggle="modal" data-target="#prjverifymodal">作品简介</div>
+                                                                <div class="finalsubmitted" style="display: none;">作品简介</div>
                                                             </div>
                                                             <div class="shorttext col-md-7"><input class="infotypeNone" name="content" id="shortprjverify" readonly value="您还没有提交作品简介"/></div>
                                                         </div>
@@ -251,7 +253,7 @@
                                                             <div class="col">
                                                                 <!-- <button class="moreintroforp2" type="submit">提交</button> -->
                                                                 <div class="moreintroforp2" onclick=submitinfo() id="finalsubmit">提交</div>
-                                                                <div id="finalsubmitted" style="display: none;">已提交</div>
+                                                                <div class="finalsubmitted" style="display: none;">已提交</div>
                                                             </div>
                                                             <div class="col"></div>
                                                         </div>
@@ -353,18 +355,12 @@
                     <div class="form-group">
                         <label for="prjverify" class="modaltitle col-form-label">报名须知</label>
                     </div>
-                    <div class="notices form-group">
-                        1.	所有参赛作品须为本单位（本人）原创，不能存在任何侵犯第三方权利的内容，不能违反法律法规的规定，且提供的关于作品的信息全部真实、有效。
-                    </div>
+                    <div class="notices form-group">1.	所有参赛作品须为本单位（本人）原创，不能存在任何侵犯第三方权利的内容，不能违反法律法规的规定，且提供的关于作品的信息全部真实、有效。</div>
                     <div class="notices form-group">
                         2.	如果被选中专题活动作品刊登在"百项网络正能量专题活动"专题及其他传播平台中，产生任何纠纷，须由参赛单位（或联系人）承担责任。如给本网站造成任何损失，须由参赛单位（或联系人）向本网站进行赔偿。
                     </div>
-                    <div class="notices form-group">
-                        3.	所有参赛作品授权市委政法委、市扫黑除恶办，均可在佛山+及其他传播平台上发布。
-                    </div>
-                    <div class="notices form-group">
-                        4.	本人/我司在充分理解并自愿接受比赛通知和评选规则的前提下参赛。
-                    </div>
+                    <div class="notices form-group">3.	所有参赛作品授权市委政法委、市扫黑除恶办，均可在佛山+及其他传播平台上发布。</div>
+                    <div class="notices form-group">4.	本人/我司在充分理解并自愿接受比赛通知和评选规则的前提下参赛。</div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>

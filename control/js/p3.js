@@ -49,7 +49,77 @@ function steppre() {
     step.step("previous");
 }
 
-function stepnext() {
+function stepnext_1to2() {
+
+    var title = $("#prjname").val().length;
+    var ffile = $("#prjvideo")[0].files.length;
+    var v_type = $("input[name='v_type']:checked").val();
+    var fimg = $("#prjcover")[0].files.length;
+
+    if (title === 0) {
+        swal({title: "作品名称不可为空",icon: "error",});
+        return;
+    }
+    if (ffile === 0) {
+        swal({title: "请上传作品文件",icon: "error",});
+        return;
+    }
+    if (fimg === 0) {
+        swal({title: "请上传作品剧照",icon: "error",});
+        return;
+    }
+
+    liteswitch.next()
+    step.step("next");
+}
+
+function stepnext_2to3() {
+
+    var company_a = $("#prjbelong").val().length;
+    var contact_person = $("#prjcontact").val().length;
+    var phone = $("#prjphone").val().length;
+
+    if (company_a === 0) {
+        swal({title: "请填写报送单位",icon: "error",});
+        return;
+    }
+    if (contact_person === 0) {
+        swal({title: "请填写联系人",icon: "error",});
+        return;
+    }
+    if (phone === 0) {
+        swal({title: "请填写联系方式",icon: "error",});
+        return;
+    }
+
+    liteswitch.next()
+    step.step("next");
+}
+
+function stepnext_3to4() {
+
+    var director = $("#prjdirector").val().length;
+    var screenwriter = $("#prjwriter").val().length;
+    var photography = $("#prjphotograph").val().length;
+    var clip = $("#prjredeal").val().length;
+
+    if (director === 0) {
+        swal({title: "请填写导演",icon: "error",});
+        return;
+    }
+    if (screenwriter === 0) {
+        swal({title: "请填写编剧",icon: "error",});
+        return;
+    }
+    if (photography === 0) {
+        swal({title: "请填写摄像",icon: "error",});
+        return;
+    }
+    if (clip === 0) {
+        swal({title: "请填写剪辑",icon: "error",});
+        return;
+    }
+
     liteswitch.next()
     step.step("next");
 }
@@ -82,56 +152,43 @@ function postToshort(writepart, postpart, modal) {
 
 function submitinfo() {
 
-    // var exam_id = "29";
+    var starring = $("#prjactor").val().length;
+    var content_500 = $("#shortprjmain").val();
+    var content = $("#shortprjverify").val();
+    var read = $("#read").is(":checked");
 
-    // var title = $("#prjname").val();
-    // var ffile = $("#prjvideo")[0].files[0];
-    // var v_type = $("input[name='v_type']:checked").val();
-    // var fimg = $("#prjcover")[0].files[0];
+    if (starring === 0) {
+        swal({title: "请填写演员",icon: "error",});
+        return;
+    }
+    if (content_500 === '您还没有提交作品梗概') {
+        swal({title: "请填写作品梗概",icon: "error",});
+        return;
+    }
+    if (content === '您还没有提交作品简介') {
+        swal({title: "请填写作品简介",icon: "error",});
+        return;
+    }
+    if (read === false) {
+        swal({title: "请阅读活动规则后勾选",icon: "error",});
+        return;
+    }
 
-    // var company_a = $("#prjbelong").val();
-    // var contact_person = $("#prjcontact").val();
-    // var phone = $("#prjphone").val();
+    // swal({
+    //     title: "提交成功",
+    //     icon: "success",
+    // }).then(done=>{
+    //     //提交成功后，隐藏返回按钮，提交按钮，修改模态框按钮，禁用输入框和复选框
+    //     $("#finalpre").css("display","none");
+    //     $("#finalsubmit").css("display","none");
+    //     $(".showmodal").css("display","none");
+    //     $('#prjactor').prop("disabled", true);
+    //     $('#read').prop("disabled", true);
 
-    // var director = $("#prjdirector").val();
-    // var screenwriter = $("#prjwriter").val();
-    // var photography = $("#prjphotograph").val();
-    // var clip = $("#prjredeal").val();
-
-    // var starring = $("#prjactor").val();
-    // var content_500 = $("#shortprjmain").val();
-    // var content = $("#shortprjverify").val();
-
-    // console.log(v_type)
-    // console.log(exam_id)
-    // console.log(title)
-    // console.log(ffile)
-    // console.log(v_type)
-    // console.log(fimg)
-    // console.log(company_a)
-    // console.log(contact_person)
-    // console.log(phone)
-    // console.log(director)
-    // console.log(screenwriter)
-    // console.log(photography)
-    // console.log(clip)
-    // console.log(starring)
-    // console.log(content_500)
-    // console.log(content)
-
-    // console.log(commonlink + 'hei_up')
-
-    swal({
-        title: "提交成功",
-        icon: "success",
-    }).then(done=>{
-        $("#finalpre").css("display","none");
-        $("#finalsubmit").css("display","none");
-
-        $("#finalsubmitted").css("display","block");
-        $("#finalsubmitted").css("backgournd-color","gray");
-    });
-    return
+    //     //提交成功后显示禁用按钮
+    //     $(".finalsubmitted").css("display","block");
+    // });
+    // return
 
 
 
@@ -155,15 +212,29 @@ function submitinfo() {
 
         // dataType:"json",
         success:function(receiver){
+            console.log(receiver);
             swal({
                 title: "提交成功",
                 icon: "success",
             }).then(done=>{
-                $("#finalsubmit").style("css")
+                //提交成功后，隐藏返回按钮，提交按钮，修改模态框按钮，禁用输入框和复选框
+                $("#finalpre").css("display","none");
+                $("#finalsubmit").css("display","none");
+                $(".showmodal").css("display","none");
+                $('#prjactor').prop("disabled", true);
+                $('#read').prop("disabled", true);
+        
+                //提交成功后显示禁用按钮
+                $(".finalsubmitted").css("display","block");
             });
         },
         error: function(){
-            console.log(receiver)
+            console.log(receiver);
+            swal({
+                title: "提交失败，请稍后重试",
+                icon: "error",
+            });
+            return;
         }
     });
 
