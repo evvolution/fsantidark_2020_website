@@ -56,18 +56,18 @@ function stepnext_1to2() {
     var v_type = $("input[name='v_type']:checked").val();
     var fimg = $("#prjcover")[0].files.length;
 
-    if (title === 0) {
-        swal({title: "作品名称不可为空",icon: "error",});
-        return;
-    }
-    if (ffile === 0) {
-        swal({title: "请上传作品文件",icon: "error",});
-        return;
-    }
-    if (fimg === 0) {
-        swal({title: "请上传作品剧照",icon: "error",});
-        return;
-    }
+    // if (title === 0) {
+    //     swal({title: "作品名称不可为空",icon: "error",});
+    //     return;
+    // }
+    // if (ffile === 0) {
+    //     swal({title: "请上传作品文件",icon: "error",});
+    //     return;
+    // }
+    // if (fimg === 0) {
+    //     swal({title: "请上传作品剧照",icon: "error",});
+    //     return;
+    // }
 
     liteswitch.next()
     step.step("next");
@@ -138,7 +138,6 @@ function postToshort(writepart, postpart, modal) {
             title: "内容不可为空",
             icon: "error",
         });
-        // $('#' + modal).modal("hide")
     }else {
         $('#' + postpart).val(inside);
         swal({
@@ -177,6 +176,13 @@ function submitinfo() {
     // swal({
     //     title: "提交成功",
     //     icon: "success",
+    //     text: '请等待作品审核，您可以在佛山+中查看审核进度',
+    //     content: {
+    //         element: "img",
+    //         attributes: {
+    //             src: "././img/basic/2.png",
+    //         },
+    //     },
     // }).then(done=>{
     //     //提交成功后，隐藏返回按钮，提交按钮，修改模态框按钮，禁用输入框和复选框
     //     $("#finalpre").css("display","none");
@@ -216,6 +222,13 @@ function submitinfo() {
             swal({
                 title: "提交成功",
                 icon: "success",
+                text: '请等待作品审核，您可以在佛山+中查看审核进度',
+                content: {
+                    element: "img",
+                    attributes: {
+                        src: "././img/basic/2.png",
+                    },
+                },
             }).then(done=>{
                 //提交成功后，隐藏返回按钮，提交按钮，修改模态框按钮，禁用输入框和复选框
                 $("#finalpre").css("display","none");
