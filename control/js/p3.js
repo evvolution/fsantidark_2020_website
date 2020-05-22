@@ -36,8 +36,8 @@ function initFile() {
     });
 }
 
-function initLiteswitch() {
-    liteswitch = new liteswitch({//下面要用到Siema，就要声明为全局变量
+function initLiteswitchp3() {
+    liteswitch = new liteswitch({//下面要用到，就要声明为全局变量
         loop: false,
         startIndex: 0,//起始滑块的索引（从零开始）
         draggable: false,//使用拖动和触摸滑动
@@ -253,23 +253,3 @@ function submitinfo() {
     });
 }
 
-function getoldprjs() {
-    console.log(commonlink + 'hei_up')
-    $.ajax({
-        type:"get",
-        url: commonlink + 'hei_up',
-        data: {exam_id: "34"},
-        dataType: "json",
-        success:function(receiver){
-            console.log(receiver);
-        },
-        error: function(receiver){
-            console.log(receiver);
-            swal({
-                title: "获取历史记录失败，请稍后重试",
-                icon: "error",
-            });
-            return;
-        }
-    });
-}

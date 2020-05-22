@@ -25,8 +25,8 @@ body {
     width: 100%;
     height: 100%;
     background-color: #b60402;
-    /* background:url(../../img/basic/bg-min.png) top center no-repeat; */
-    background:url(../../img/basic/bg-3.png) top center no-repeat;
+    /* background:url(../../img/basic/bg-3.png) top center no-repeat; */
+    background:url(../../img/basic/bg-3.5-min.png) top center no-repeat;
     background-size:100%;
 }
 
@@ -51,7 +51,6 @@ body {
 
 .btn:focus {
     color: #495057;
-    /* background-color: #fff; */
     outline: 0;
     box-shadow: 0 0 0 0 transparent;
 }
@@ -81,6 +80,18 @@ body {
 
 .progress {
     font-size: 0.5vw;
+}
+
+.fp-tableCell {
+    height: 100% !important;
+}
+
+.card-body {
+    padding: 1vw;
+}
+
+.card-text {
+    margin-bottom: 1vw;
 }
 
 .commonpicfortitle {
@@ -128,5 +139,5 @@ body {
 
 .fsnav .active {
     color: #000;
-    background-color: #aa261a;
+    background-color: #e41300;
 }

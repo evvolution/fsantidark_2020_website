@@ -35,34 +35,36 @@
         </ul>
         <div id="fullpage">
             <div class="section pageOne">
-                <div class="titleContent">
-                    <img src="img/p1/title.png" />
-                    <div class="flashContent flash_left">
-                        <img src="img/p1/flash.png" />
-                    </div>
-                    <div class="flashContent flash_middle">
-                        <img src="img/p1/flash.png" />
-                    </div>
-                    <div class="flashContent flash_right">
-                        <img src="img/p1/flash.png" />
+                <div class="row p1row">
+                    <div class="titleContent col-lg-12">
+                        <img src="img/p1/title.png" />
+                        <div class="flashContent flash_left">
+                            <img src="img/p1/flash.png" />
+                        </div>
+                        <div class="flashContent flash_middle">
+                            <img src="img/p1/flash.png" />
+                        </div>
+                        <div class="flashContent flash_right">
+                            <img src="img/p1/flash.png" />
+                        </div>
                     </div>
                 </div>
-                <div class="timelineContent">
-                    <div class="filmback"></div>
+                <div class="row p1row">
+                    <div class="timelineContent col-lg-12">
+                        <div class="filmback"></div>
+                        <!-- 线条图片div -->
+                        <div class="line_left"></div>
+                        <div class="line_middle"></div>
+                        <div class="line_right"></div>
 
-                    <!-- 线条图片div -->
-                    <div class="line_left"></div>
-                    <div class="line_middle"></div>
-                    <div class="line_right"></div>
-
-                    <!-- 时间节点图div -->
-                    <div class="node1"></div>
-                    <div class="node2"></div>
-                    <div class="node3"></div>
-                    <div class="node4"></div>
+                        <!-- 时间节点图div -->
+                        <div class="node1"></div>
+                        <div class="node2"></div>
+                        <div class="node3"></div>
+                        <div class="node4"></div>
+                    </div>
                 </div>
-
-                <div class="founderContent">
+                <div class="row p1row">
                     <div class="founderIntro"></div>
                 </div>
             </div>
@@ -272,7 +274,7 @@
                         <p class="guidetitleforp3"><strong>报名方式：</strong></p>
                         <p class="guidecontentforp3">1. 在线报名</p>
                         <p class="guidecontentforp3">在线上传作品并填写下面信息，填写完毕后点击作品上传</p>
-                        <p class="guidecontentforp3">2. 邮箱报名 点击下载报名表</p>
+                        <p class="guidecontentforp3">2. 邮箱报名 点击<a href="plugins/info.docx" ><strong>下载报名表</strong></a></p>
                         <p class="guidecontentforp3">填写完毕后和作品一同上传发送至大赛邮箱fsshcyds@163.com。</p>
                         <p class="guidecontentforp3">注：版权承诺书个人签字/单位盖公章后将扫描电子版上传。</p>
                         <p class="guidecontentforp3">（以上两种报名方式任选一种，不要重复报名）</p>
@@ -307,7 +309,40 @@
                         </div>
                     </div>
                     <div class="row p5row">
-
+                        <div class="col-lg-12">
+                            <div class="liteswitchp5 boxTxt oldprjs">
+                                <div class="box">
+                                    <div class="row p5rowlevel2">
+                                        <div class="col-md-4 oldprjitem">
+                                            <div class="oldprjcover">
+                                                <a href="" target='_blank'><img src="img/basic/fslogo.png"/></a>
+                                            </div>
+                                            <div class="oldprjtitle">法不容“乱”——佛山市三水区人民法院审理区重点治乱案件纪实</div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col">1</div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col">1</div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    4
+                                </div>
+                                <div class="box">
+                                    5
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -375,7 +410,8 @@
     <script type="text/javascript" src="plugins/fullpage/fullpage.min.js"></script>
     <script type="text/javascript" src="plugins/fileinput/fileinput.min.js"></script>
     <script type="text/javascript" src="plugins/fileinput/zh.js"></script>
-    <script type="text/javascript" src="plugins/liteswitch/liteswitch.min.js"></script>
+    <script type="text/javascript" src="plugins/liteswitch/liteswitch3.js"></script>
+    <script type="text/javascript" src="plugins/liteswitch/liteswitch5.js"></script>
     <script type="text/javascript" src="plugins/litestep/step.js"></script>
     <script type="text/javascript" src="plugins/sweetalert/sweetalert.js"></script>
 
@@ -383,5 +419,10 @@
     <script type="text/javascript" src="control/js/viewinit.js"></script>
     <script type="text/javascript" src="control/js/p2.js"></script>
     <script type="text/javascript" src="control/js/p3.js"></script>
+    <script type="text/javascript" src="control/js/p5.js"></script>
+    <!-- <script>
+        var xxxx = encodeURI('oldvideoitem.html?video=http://img.foshanplus.com/2019heip/145.mp4&title=法不容“乱”——佛山市三水区人民法院审理区重点治乱案件纪实&poster=http://img.foshanplus.com/2019heip/155.png&company=company&director=director&brief=brief')
+        alert(xxxx)
+    </script> -->
 </body>
 </html>

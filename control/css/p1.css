@@ -9,9 +9,10 @@
 
 .titleContent {
     /* border: 1px solid #000; */
+    width: 60%;
     position: absolute; 
     left: 50%; 
-    top: 35%;
+    top: 30%;
     transform: translate(-30%, -30%);
     -webkit-transform: translate(-50%, -50%);
 }
@@ -50,14 +51,6 @@
     z-index: -1;
 }
 
-.timelineContent,.founderIntro{
-    position: absolute;
-}
-
-.timelineContent {
-    left: 50%;
-}
-
 .filmback {
     position: absolute;
     background: url(../../img/p1/film.png) top center no-repeat;
@@ -81,15 +74,6 @@
     width: 8.55rem;
     height: 1.21rem; 
 }
-
-/* .founderIntro {
-    transform: scale(0);
-    -webkit-transform: scale(0);
-    transform-origin: center center;
-    -webkit-transform-origin: center center;
-    animation: zoomIn 0.8s 1.2s forwards;
-    -webkit-animation: zoomIn 0.8s 1.2s forwards; 
-} */
 
 @-webkit-keyframes breathe {
 	0% {

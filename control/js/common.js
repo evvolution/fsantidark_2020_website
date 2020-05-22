@@ -4,16 +4,16 @@
     anthor：zx
 */
 
-
 var step = $("#step");
-var commonlink = 'http://server.foshanplus.com/';
+var commonlink = 'http://server3.foshanplus.com/';
 
 $(document).ready(function() {
     initMainview()
     initSize();
     initFile();
-    initLiteswitch();
+    initLiteswitchp3();
     initLitestep();
+    initLiteswitchp5();
 
-    // getoldprjs();
+    getoldprjs();
 });
