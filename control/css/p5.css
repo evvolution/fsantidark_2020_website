@@ -31,7 +31,7 @@
 
 .oldprjs {
     width: 85% !important;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     top: 0;
     left: 0;
     bottom: 0;
@@ -60,4 +60,22 @@
     margin: 0.5vw 0;
     font-size: .6vw;
     color: whitesmoke;
+}
+
+.p5direct {
+    display: inline;
+    padding: 10px;
+    background-color: #ffc14d;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 22px;
+    bottom: 5%;
+    cursor: pointer;
+}
+
+.btncontent {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
 }

@@ -13,7 +13,10 @@ $(document).ready(function() {
     initFile();
     initLiteswitchp3();
     initLitestep();
-    initLiteswitchp5();
 
     getoldprjs();
 });
+
+window.onload = function() {
+    
+}

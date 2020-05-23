@@ -45,7 +45,7 @@ function initLiteswitchp3() {
 }
 
 function steppre() {
-    liteswitch.prev()
+    liteswitch.prev();
     step.step("previous");
 }
 
