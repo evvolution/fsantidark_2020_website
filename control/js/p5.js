@@ -8,7 +8,7 @@ function getoldprjs() {
         type:"get",
         url: commonlink + 'exam/get_vote/?exam_id=34',
         success:function(receiver){
-            console.log(receiver.projects[0]);
+            // console.log(receiver.projects[0]);
 
             //填入轮播的dom总string
             var inner = "";
@@ -26,27 +26,51 @@ function getoldprjs() {
                 countall_boxNum = countall / 6;
                 for(var i = 0; i < countall_boxNum; i++) {
                     var title = '<div class="box"><div class="row p5rowlevel2">';
-
                     //填入每页的item构建
                     var inneritem = "";
                     for(var j = 6*i; j < 6*(i + 1); j++) {
-                        var line1 = '<div class="col-md-4 oldprjitem"><div class="oldprjcover">';
-                        var url = 'oldvideoitem.html?id=' + receiver.projects[0][j].id;
-                        var line2 = '<a href="' + url + '" target="_blank">';
-                        var line3 = '<img src="' + receiver.projects[0][j].pic_url + '"/></a></div>';
-                        var line4 = '<div class="oldprjtitle">' + receiver.projects[0][j].title + '</div></div>';
+                        let line1 = '<div class="col-md-4 oldprjitem"><div class="oldprjcover">';
+                        let url = 'oldvideoitem.html?id=' + receiver.projects[0][j].id;
+                        let line2 = '<a href="' + url + '" target="_blank">';
+                        let line3 = '<img src="' + receiver.projects[0][j].pic_url + '"/></a></div>';
+                        let line4 = '<div class="oldprjtitle">' + receiver.projects[0][j].title + '</div></div>';
                         inneritem += (line1 + line2 +line3 +line4);
                     }
                     var tail = '</div></div>';
                     inner += (title + inneritem + tail);
                 }
-                $("#oldprjs").html(inner);
-
-            }else {
+            } else {
                 countall_boxNum = Math.ceil(countall / 6);
+                for(var i = 0; i < countall_boxNum; i++) {
+                    var title = '<div class="box"><div class="row p5rowlevel2">';
+                    //填入每页的item构建
+                    var inneritem = "";
+                    if(i != (countall_boxNum - 1)) {
+                        for(var j = 6*i; j < 6*(i + 1); j++) {
+                            let line1 = '<div class="col-md-4 oldprjitem"><div class="oldprjcover">';
+                            let url = 'oldvideoitem.html?id=' + receiver.projects[0][j].id;
+                            let line2 = '<a href="' + url + '" target="_blank">';
+                            let line3 = '<img src="' + receiver.projects[0][j].pic_url + '"/></a></div>';
+                            let line4 = '<div class="oldprjtitle">' + receiver.projects[0][j].title + '</div></div>';
+                            inneritem += (line1 + line2 +line3 +line4);
+                        }
+                    } else {
+                        for(var k = 6*i; k < countall; k++) { //这里循环结束以整个实际长度为准
+                            let line1 = '<div class="col-md-4 oldprjitem"><div class="oldprjcover">';
+                            let url = 'oldvideoitem.html?id=' + receiver.projects[0][k].id;
+                            let line2 = '<a href="' + url + '" target="_blank">';
+                            let line3 = '<img src="' + receiver.projects[0][k].pic_url + '"/></a></div>';
+                            let line4 = '<div class="oldprjtitle">' + receiver.projects[0][k].title + '</div></div>';
+                            inneritem += (line1 + line2 +line3 +line4);
+                        }
+                    }
+                    var tail = '</div></div>';
+                    inner += (title + inneritem + tail);
+                }
             }
-            // var countall_boxnum = Math.ceil(countall / 6);
-            liteswitchp5 = new liteswitchp5({//下面要用到，就要声明为全局变量
+
+            $("#oldprjs").html(inner);
+            liteswitchp5 = new liteswitchp5({
                 loop: true,
                 startIndex: 0,//起始滑块的索引（从零开始）
                 draggable: false,//使用拖动和触摸滑动

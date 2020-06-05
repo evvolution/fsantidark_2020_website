@@ -7,9 +7,8 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta name="renderer" content="webkit">
     <meta name="referrer" content="never">
-    <link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="plugins/fullpage/fullpage.min.css">
-    <link rel="stylesheet" type="text/css" href="plugins/fileinput/fileinput.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/fullPage.js/3.0.8/fullpage.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="plugins/fullpage/fullpage.css"> -->
     <link rel="stylesheet" type="text/css" href="plugins/litestep/step.css">
 
     <link rel="stylesheet" type="text/css" href="control/css/basic.css">
@@ -19,373 +18,274 @@
     <link rel="stylesheet" type="text/css" href="control/css/p3.css">
     <link rel="stylesheet" type="text/css" href="control/css/p4.css">
     <link rel="stylesheet" type="text/css" href="control/css/p5.css">
+    <link rel="stylesheet" type="text/css" href="control/css/fspmodal.css">
 
 </head>
 
 <body>
-    <div class="container-fluid">
-        <ul class="fsnav" id="fsantidarkMenu">
-            <div class="goldenborder"></div>
-            <li><img src="img/basic/MENU.png"/></li>
-            <li data-menuanchor="p1" class="menulist"><a href="#p1">专题首页</a></li>
-            <li data-menuanchor="p2" class="menulist"><a href="#p2">大赛简介</a></li>
-            <li data-menuanchor="p3" class="menulist"><a href="#p3">我要报名</a></li>
-            <li data-menuanchor="p4" class="menulist"><a href="#p4">新闻动态</a></li>
-            <li data-menuanchor="p5" class="menulist"><a href="#p5">作品展示</a></li>
-        </ul>
-        <div id="fullpage">
-            <div class="section pageOne">
-                <div class="row p1row">
-                    <div class="titleContent col-lg-12">
-                        <img src="img/p1/title.png" />
-                        <div class="flashContent flash_left">
-                            <img src="img/p1/flash.png" />
-                        </div>
-                        <div class="flashContent flash_middle">
-                            <img src="img/p1/flash.png" />
-                        </div>
-                        <div class="flashContent flash_right">
-                            <img src="img/p1/flash.png" />
-                        </div>
-                    </div>
-                </div>
-                <div class="row p1row">
-                    <div class="timelineContent col-lg-12">
-                        <div class="filmback"></div>
-                        <!-- 线条图片div -->
-                        <div class="line_left"></div>
-                        <div class="line_middle"></div>
-                        <div class="line_right"></div>
+    <ul class="fsnav" id="fsantidarkMenu">
+        <div class="goldenborder"></div>
+        <li><img src="img/basic/MENU.png"/></li>
+        <li data-menuanchor="p1" class="menulist"><a href="#p1">专题首页</a></li>
+        <li data-menuanchor="p2" class="menulist"><a href="#p2">大赛简介</a></li>
+        <li data-menuanchor="p3" class="menulist"><a href="#p3">我要报名</a></li>
+        <li data-menuanchor="p4" class="menulist"><a href="#p4">新闻动态</a></li>
+        <li data-menuanchor="p5" class="menulist"><a href="#p5">作品展示</a></li>
+    </ul>
 
-                        <!-- 时间节点图div -->
-                        <div class="node1"></div>
-                        <div class="node2"></div>
-                        <div class="node3"></div>
-                        <div class="node4"></div>
-                    </div>
+    <div id="fullpage">
+
+        <!-- 第一页 -->
+        <div class="section pageOne">
+            <div class="titleContent"><img src="img/p1/title.png" />
+                <div class="flashContent flash_left"><img src="img/p1/flash.png" /></div>
+                <div class="flashContent flash_middle"><img src="img/p1/flash.png" /></div>
+                <div class="flashContent flash_right"><img src="img/p1/flash.png" /></div>
+            </div>
+            <div class="timelineContent">
+                <!-- 线条图片div -->
+                <div class="line_left"><img src="img/p1/line-left.png" /></div>
+                <div class="line_middle"><img src="img/p1/line-middle.png" /></div>
+                <div class="line_right"><img src="img/p1/line-right.png" /></div>
+
+                <!-- 时间节点图div -->
+                <div class="node1"></div>
+                <div class="node2"></div>
+                <div class="node3"></div>
+                <div class="node4"></div>
+            </div>
+            <div class="founderContent"><img src="img/p1/intro.png" /></div>
+        </div>
+        <!-- 第一页结束 -->
+
+        <!-- 第二页 -->
+        <div class="section pageTwo">
+            <div class="mainforpages mainp2">
+                <div class="p2left">
+                    <div class="p2content"><img src="img/p2/p2title.png"></div>
+                    <div class="p2content"><img src="img/p2/p2intro.png"></div>
+                    <div class="p2content"><div class="commonbtn-orange" onclick=formorebyPDF()>查看更多</div></div>
                 </div>
-                <div class="row p1row">
-                    <div class="founderIntro"></div>
+                <div class="p2right">
+                    <div class="p2content"><img src="img/p2/p2videotitle.png"></div>
                 </div>
             </div>
-            <div class="section pageTwo">
-                <div class="mainforp2">
-                    <div class="row p2row">
-                        <div class="col-lg-4">
-                            <img class="commonpicfortitle" src="img/p2/p2title.png">
-                        </div>
-                        <div class="col-lg-8 commonmiddle">
-                            <img class="commonpicfortitle" src="img/p2/p2videotitle.png">
-                        </div>
-                    </div>
-                    <div class="row p2row">
-                        <div class="col-lg-4">
-                            <img class="commonpicfortitle" src="img/p2/p2intro.png">
-                        </div>
-                        <div class="col-lg-8">
+        </div>
+        <!-- 第二页结束 -->
 
-                        </div>
-                    </div>
-                    <div class="row p2row">
-                        <div class="col-lg-4">
-                            <div class="moreintroforp2" onclick=formorebyPDF()>查看更多</div>
-                        </div>
-                    </div>
+        <!-- 第三页 -->
+        <div class="section pageThree">
+            <div class="mainforpages">
+                <div class="titleContent p3title">
+                    <div class="p3title-1"><img src="img/p3/p3title.png"></div>
+                    <div class="p3title-2"><img src="img/p2/p2videotitle.png"></div>
                 </div>
-            </div>
-
-            <div class="section pageThree">
-                <div class="mainforp3">
-                    <div class="row p3row">
-                        <div class="col-lg-4">
-                            <img class="commonpicfortitle" src="img/p3/p3title.png">
-                        </div>
-                        <div class="col-lg-8 commonmiddle">
-                            <img class="commonpicfortitle" src="img/p2/p2videotitle.png">
-                        </div>
-                    </div>
-
-                    <div class="row p3row">
-                        <div class="col-lg-2">
-                            <img class="commonpicfortitle" src="img/p3/03.png">
-                        </div>
-                        <div class="col-lg-10 stepsforinfo">
-                            <div class="row p3rowlevel2">
-                                <div class="container"><br/>
-                                    <div class="row p3rowlevel3">
-                                        <p class="reqtitleinp3">参赛作品要求</p>
+                <div class="p3title">
+                    <div class="p3title-1"><img src="img/p3/03.png"></div>
+                    <div class="p3inner-6">
+                        <!-- <p>参赛作品要求<br/>在2020年8月之前完成原创作品，微视频、微动漫作品时间在5分钟以内<br/>视频文件格式为mov、mp4、mpeg格式。图片文件格式为jpg或png格式</p> -->
+                        <div class="p3content"><div id="step"></div></div>
+                        <input name="exam_id" type="text" value="29" style="display: none;"/>
+                        <div class="liteswitch boxTxt">
+                            <!-- 第一步开始 -->
+                            <div class="box">
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>作品名称: </p></div>
+                                    <div class="p3sheet"><input type="text" name="title" id="prjname"/></div>
+                                </div>
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>视频类型: </p></div>
+                                    <div class="p3sheet">
+                                        <select>
+                                            <option value = "0">-请选择-</option>
+                                            <option value = "微视频">微视频作品</option>
+                                            <option value = "微电影">微电影作品</option>
+                                            <option value = "微动漫">微动漫作品</option>
+                                        </select>
                                     </div>
-                                    <div class="row p3rowlevel3">
-                                        <p class="reqintroinp3">在2020年8月之前完成的原创作品，微视频、微动漫作品时间在5分钟以内，作品上传格式为mov、mp4、mpeg格式。</p>
+                                </div>
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>上传作品<SUP>①</SUP>: </p></div>
+                                    <div class="p3sheet p3file">
+                                        <button class="bigfile_btn" id="uploadx">选择</button>
+                                        <input id="uploaded_video_name" class="bigfile_btn_info" readonly/>
                                     </div>
-                                    <div class="row p3rowlevel3">
-                                        <div id="step"></div>
+                                </div>                                
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>上传剧照<SUP>②</SUP>: </p></div>
+                                    <div class="p3sheet p3file">
+                                        <button class="bigfile_btn" id="uploads">选择</button>
+                                        <input id="uploaded_pic_name" class="bigfile_btn_info" readonly/>
                                     </div>
-                                    <div class="row p3rowlevel3">
-                                        <div class="lock"></div>
-                                        <div class="col-lg-6 offset-lg-3">
-                                            <form method="post" enctype="multipart/form-data" id="maininformation">
-                                                <div class="liteswitch boxTxt">
-                                                    <div class="box">
-                                                        <input name="exam_id" type="text" value="29" style="display: none;"/>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-3 infolabel">作品名称: </div>
-                                                            <div class="col-md-9"><input class="infotypein" name="title" id="prjname"/></div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-3 infolabel">上传作品: </div>
-                                                            <div class="col-md-9"><input id="prjvideo" name="ffile" type="file" /></div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-3 infolabel">视频类型: </div>
-                                                            <div class="col-md-9 prjtypeContent">
-                                                                <div class="row p3rowlevel5">
-                                                                    <div class="col-md prjtype">
-                                                                        <input checked class="prjtyperadio" type="radio" name="v_type" id="prjtype1" value="微视频">&nbsp;<label class="labelprjtype" for="prjtype1">微视频</label>
-                                                                    </div>
-                                                                    <div class="col-md prjtype">
-                                                                        <input class="prjtyperadio" type="radio" name="v_type" id="prjtype2" value="微电影">&nbsp;<label class="labelprjtype" for="prjtype2">微电影</label>
-                                                                    </div>
-                                                                    <div class="col-md prjtype">
-                                                                        <input class="prjtyperadio" type="radio" name="v_type" id="prjtype3" value="微动漫">&nbsp;<label class="labelprjtype" for="prjtype3">微动漫</label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-3 infolabel">上传剧照: </div>
-                                                            <div class="col-md-9"><input id="prjcover" name="fimg" type="file" /></div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col"></div>
-                                                            <div class="col">
-                                                                <div class="preandnext" onclick=stepnext_1to2()>下一步 →</div>
-                                                            </div>
-                                                            <div class="col"></div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="box">
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-3 infolabel">报送单位: </div>
-                                                            <div class="col-md-9"><input class="infotypein" name="company_a" id="prjbelong" /></div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-3 infolabel">联系人: </div>
-                                                            <div class="col-md-9"><input class="infotypein" name="contact_person" id="prjcontact"/></div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-3 infolabel">联系方式: </div>
-                                                            <div class="col-md-9"><input class="infotypein" name="phone" id="prjphone"/></div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col"></div>
-                                                            <div class="col">
-                                                                <div class="preandnext" onclick=steppre()>← 上一步</div>
-                                                            </div>
-                                                            <div class="col">
-                                                                <div class="preandnext" onclick=stepnext_2to3()>下一步 →</div>
-                                                            </div>
-                                                            <div class="col"></div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="box">
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-3 infolabel">导演: </div>
-                                                            <div class="col-md-9"><input class="infotypein" name="director" id="prjdirector"/></div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-3 infolabel">编剧: </div>
-                                                            <div class="col-md-9"><input class="infotypein" name="screenwriter" id="prjwriter"/></div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-3 infolabel">摄像: </div>
-                                                            <div class="col-md-9"><input class="infotypein" name="photography" id="prjphotograph"/></div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-3 infolabel">剪辑: </div>
-                                                            <div class="col-md-9"><input class="infotypein" name="clip" id="prjredeal"/></div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col"></div>
-                                                            <div class="col">
-                                                                <div class="preandnext" onclick=steppre()>← 上一步</div>
-                                                            </div>
-                                                            <div class="col">
-                                                                <div class="preandnext" onclick=stepnext_3to4()>下一步 →</div>
-                                                            </div>
-                                                            <div class="col"></div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="box">
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-3 infolabel">演员: </div>
-                                                            <div class="col-md-9"><input class="infotypein" name="starring" id="prjactor"/></div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-5 infolabel">
-                                                                <div class="showmodal" data-toggle="modal" data-target="#prjmainmodal">作品梗概</div>
-                                                                <div class="finalsubmitted" style="display: none;">作品梗概</div>
-                                                            </div>
-                                                            <div class="shorttext col-md-7"><input class="infotypeNone" name="content_500" id="shortprjmain" readonly value="您还没有提交作品梗概"/></div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-5 infolabel">
-                                                                <div class="showmodal" data-toggle="modal" data-target="#prjverifymodal">作品简介</div>
-                                                                <div class="finalsubmitted" style="display: none;">作品简介</div>
-                                                            </div>
-                                                            <div class="shorttext col-md-7"><input class="infotypeNone" name="content" id="shortprjverify" readonly value="您还没有提交作品简介"/></div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col-md-12">
-                                                                <input class="prjread" type="checkbox" id="read">&nbsp;
-                                                                <label class="labelprjread" for="read">
-                                                                    本人已详细阅读并熟知本<a data-toggle="modal" data-target="#prjnotice"><strong>报名须知(点击查看)</strong></a>，并承诺严格遵守
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row p3rowlevel4">
-                                                            <div class="col"></div>
-                                                            <div class="col" id="finalpre">
-                                                                <div class="preandnext" onclick=steppre() >← 上一步</div>
-                                                            </div>
-                                                            <div class="col">
-                                                                <!-- <button class="moreintroforp2" type="submit">提交</button> -->
-                                                                <div class="moreintroforp2" onclick=submitinfo() id="finalsubmit">提交</div>
-                                                                <div class="finalsubmitted" style="display: none;">已提交</div>
-                                                            </div>
-                                                            <div class="col"></div>
-                                                        </div>
-                                                    </div>       
-                                                </div>
-                                            </form>
-                                        </div>
+                                </div>
+                                <div class="p3-btngroup">
+                                    <div class="btngroup-btn">
+                                        <div class="commonbtn-red-prenext p3btn" onclick=stepnext_1to2()>下一步 →</div>
                                     </div>
+                                </div>
+                                <p class="p3noticelabel"><br/>① 微视频、微动漫作品时间在5分钟以内，视频文件格式为mov、mp4、mpeg格式</p>
+                                <p class="p3noticelabel">② 图片文件格式为jpg或png格式</p>
+                            </div>
+                            <!-- 第一步结束 -->
 
+                            <!-- 第二步开始 -->
+                            <div class="box">
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>报送单位: </p></div>
+                                    <div class="p3sheet"><input type="text" name="company_a" id="prjbelong"/></div>
+                                </div>
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>联系人: </p></div>
+                                    <div class="p3sheet"><input type="text" name="contact_person" id="prjcontact"/></div>
+                                </div>
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>联系方式: </p></div>
+                                    <div class="p3sheet"><input type="text" name="phone" id="prjphone"/></div>
+                                </div>
+                                <div class="p3-btngroup">
+                                    <div class="btngroup-btn">
+                                        <div class="commonbtn-red-prenext p3btn" onclick=steppre()>← 上一步</div>
+                                        <div class="commonbtn-red-prenext p3btn" onclick=stepnext_2to3()>下一步 →</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="guideforp3">
-                        <p class="guidetitleforp3"><strong>报名方式：</strong></p>
-                        <p class="guidecontentforp3">1. 在线报名</p>
-                        <p class="guidecontentforp3">在线上传作品并填写下面信息，填写完毕后点击作品上传</p>
-                        <p class="guidecontentforp3">2. 邮箱报名 点击<a href="plugins/info.docx" ><strong>下载报名表</strong></a></p>
-                        <p class="guidecontentforp3">填写完毕后和作品一同上传发送至大赛邮箱fsshcyds@163.com。</p>
-                        <p class="guidecontentforp3">注：版权承诺书个人签字/单位盖公章后将扫描电子版上传。</p>
-                        <p class="guidecontentforp3">（以上两种报名方式任选一种，不要重复报名）</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="mainforp4">
-                    <div class="row p4row">
-                        <div class="col-lg-12">
-                            <img class="commonpicfortitle" src="img/p4/p4title.png">
-                        </div>
-                    </div>
-                    <div class="row p4row">
-                        <div class="col-lg-6">
+                            <!-- 第二步结束 -->
                             
-                        </div>
-                        <div class="col-lg-6">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="mainforp5">
-                    <div class="row p5row">
-                        <div class="col-lg-10">
-                            <img class="commonpicfortitle" src="img/p5/p5title-1.png">
-                        </div>
-                        <div class="col-lg-2">
-                            <img class="commonpicfortitle" src="img/p5/p5title-2.png">
-                        </div>
-                    </div>
-                    <div class="row p5row">
-                        <div class="col-lg-12">
-                            <div class="btncontent">
-                                <div class="p5direct" onclick=liteswitchp5.prev()>&nbsp;←&nbsp;</div>
-                                <div class="p5direct" onclick=liteswitchp5.next()>&nbsp;→&nbsp;</div>
+                            <!-- 第三步开始 -->
+                            <div class="box">
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>导演: </p></div>
+                                    <div class="p3sheet"><input type="text" name="director" id="prjdirector"/></div>
+                                </div>
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>编剧: </p></div>
+                                    <div class="p3sheet"><input type="text" name="screenwriter" id="prjwriter"/></div>
+                                </div>
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>摄像: </p></div>
+                                    <div class="p3sheet"><input type="text" name="photography" id="prjphotograph"/></div>
+                                </div>
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>剪辑: </p></div>
+                                    <div class="p3sheet"><input type="text" name="clip" id="prjredeal"/></div>
+                                </div>
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>演员: </p></div>
+                                    <div class="p3sheet"><input type="text" name="starring" id="prjactor"/></div>
+                                </div>
+                                <div class="p3-btngroup">
+                                    <div class="btngroup-btn">
+                                        <div class="commonbtn-red-prenext p3btn" onclick=steppre()>← 上一步</div>
+                                        <div class="commonbtn-red-prenext p3btn" onclick=stepnext_3to4()>下一步 →</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="liteswitchp5 boxTxt oldprjs" id="oldprjs"></div>
+                            <!-- 第三步结束 -->
+                            
+                            <!-- 第四步开始 -->
+                            <div class="box">
+
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>作品梗概: </p></div>
+                                    <div class="p3sheet"><input class="sinput" type="text" name="content_500" id="prjactor" readonly placeholder="点击填写作品梗概" onclick="modalshow('prjmainmodal')"/></div>
+                                </div>
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label"><p>作品简介: </p></div>
+                                    <div class="p3sheet"><input class="sinput" type="text" name="content" id="prjactor" readonly placeholder="点击填写作品简介" onclick="modalshow('prjverifymodal')"/></div>
+                                </div>
+                                <div class="p3-sheetgroup">
+                                    <div class="p3label">
+                                        <input type="checkbox" id="read">&nbsp;
+                                        <label for="read">本人已详细阅读并熟知本<a onclick="modalshow('prjnotice')"><strong>报名须知(点击查看)</strong></a>，并承诺严格遵守</label>
+                                    </div>
+                                </div>
+                                <!-- <div class="p3-btngroup">
+                                    <div class="btngroup-btn">
+                                        <div class="commonbtn-red-prenext p3btn" onclick=steppre()>← 上一步</div>
+                                        <div class="commonbtn-orange p3btn" onclick=>提交</div>
+                                    </div>
+                                </div> -->
+                                <div class="final-group" id="final-group">
+                                    <img src="img/basic/download.png">
+                                    <p>扫码下载佛山+查看实时审核进度，了解更多大赛咨询</p>
+                                </div>
+                            </div>
+                            <!-- 第四步结束 -->
                         </div>
                     </div>
                 </div>
+
+                <div class="p3guide">
+                    <p><strong>报名方式：</strong></p>
+                    <p>1. 在线报名</p>
+                    <p>在线上传作品并填写下面信息，填写完毕后点击作品上传</p>
+                    <p>2. 邮箱报名 点击<a href="plugins/info.docx" ><strong>下载报名表</strong></a></p>
+                    <p>填写完毕后和作品一同上传发送至大赛邮箱fsshcyds@163.com。</p>
+                    <p>注：版权承诺书个人签字/单位盖公章后将扫描电子版上传。</p>
+                    <p>（以上两种报名方式任选一种，不要重复报名）</p>
+                </div>
+
             </div>
         </div>
     </div>
     
-    <div class="modal fade " tabindex="-1" role="dialog" aria-hidden="true" id="prjmainmodal" data-backdrop="static">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="prjmaintro" class="modaltitle col-form-label">作品梗概(500字以内，介绍作品内容)</label>
-                        <textarea class="modaltextarea form-control" id="prjmaintro" maxlength="500"></textarea>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary" onclick="postToshort('prjmaintro','shortprjmain','prjmainmodal')">保存</button>
-                </div>
+
+
+    <div class="modalfade fspmodal" id="prjmainmodal">
+        <div class="fspmodal lgmodal" role="document">
+            <div class="fspmodal-title">
+                <div class="fspmodal-title-inner">作品梗概(500字以内，介绍作品内容)</div>
+                <!-- <div class="fspmodal-title-close"><div class="commonbtn-close" onclick='modalclose("prjverifymodal")'>X</div></div> -->
+            </div>
+            <div class="fspmodal-content"><textarea id="prjmain" maxlength="500"></textarea></div>
+            <div class="fspmodal-footer">
+                <div class="commonbtn-cancel" onclick='modalclose("prjmainmodal")'>取消</div>
+                <div class="commonbtn-save">保存</div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade " tabindex="-1" role="dialog" aria-hidden="true" id="prjverifymodal" data-backdrop="static">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="prjverify" class="modaltitle col-form-label">作品简介(100字以内，用于宣传推广)</label>
-                        <textarea class="modaltextarea form-control" id="prjverify" maxlength="100"></textarea>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary" onclick="postToshort('prjverify','shortprjverify','prjverifymodal')">保存</button>
-                </div>
+    <div class="modalfade fspmodal" id="prjverifymodal">
+        <div class="fspmodal lgmodal" role="document">
+            <div class="fspmodal-title">
+                <div class="fspmodal-title-inner">作品简介(100字以内，用于宣传推广)</div>
+                <!-- <div class="fspmodal-title-close"><div class="commonbtn-close" onclick='modalclose("prjverifymodal")'>X</div></div> -->
+            </div>
+            <div class="fspmodal-content"><textarea id="prjverify" maxlength="100"></textarea></div>
+            <div class="fspmodal-footer">
+                <div class="commonbtn-cancel" onclick='modalclose("prjverifymodal")'>取消</div>
+                <div class="commonbtn-save">保存</div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade " tabindex="-1" role="dialog" aria-hidden="true" id="prjnotice" data-backdrop="static">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="prjverify" class="modaltitle col-form-label">报名须知</label>
-                    </div>
-                    <div class="notices form-group">1.	所有参赛作品须为本单位（本人）原创，不能存在任何侵犯第三方权利的内容，不能违反法律法规的规定，且提供的关于作品的信息全部真实、有效。</div>
-                    <div class="notices form-group">
-                        2.	如果被选中专题活动作品刊登在"百项网络正能量专题活动"专题及其他传播平台中，产生任何纠纷，须由参赛单位（或联系人）承担责任。如给本网站造成任何损失，须由参赛单位（或联系人）向本网站进行赔偿。
-                    </div>
-                    <div class="notices form-group">3.	所有参赛作品授权市委政法委、市扫黑除恶办，均可在佛山+及其他传播平台上发布。</div>
-                    <div class="notices form-group">4.	本人/我司在充分理解并自愿接受比赛通知和评选规则的前提下参赛。</div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
-                </div>
+    <div class="modalfade fspmodal" id="prjnotice">
+        <div class="fspmodal smmodal" role="document">
+            <div class="fspmodal-title">
+                <div class="fspmodal-title-inner">报名须知</div>
+                <div class="fspmodal-title-close"><div class="commonbtn-close" onclick='modalclose("prjnotice")'>X</div></div>
+            </div>
+            <div class="fspmodal-content">
+                <p>1.所有参赛作品须为本单位（本人）原创，不能存在任何侵犯第三方权利的内容，不能违反法律法规的规定，且提供的关于作品的信息全部真实、有效。</p>
+                <p>2.如果被选中专题活动作品刊登在"百项网络正能量专题活动"专题及其他传播平台中，产生任何纠纷，须由参赛单位（或联系人）承担责任。如给本网站造成任何损失，须由参赛单位（或联系人）向本网站进行赔偿。</p>
+                <p>3.所有参赛作品授权市委政法委、市扫黑除恶办，均可在佛山+及其他传播平台上发布。</p>
+                <p>4.本人/我司在充分理解并自愿接受比赛通知和评选规则的前提下参赛。</p>
             </div>
         </div>
     </div>
 
+    
 
-    <script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="plugins/bootstrap/bootstrap.min.js"></script>
-    <script type="text/javascript" src="plugins/fullpage/fullpage.min.js"></script>
-    <script type="text/javascript" src="plugins/fileinput/fileinput.min.js"></script>
-    <script type="text/javascript" src="plugins/fileinput/zh.js"></script>
-    <script type="text/javascript" src="plugins/liteswitch/liteswitch3.js"></script>
-    <script type="text/javascript" src="plugins/liteswitch/liteswitch5.js"></script>
+
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="plugins/jquery/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
+    <!-- <script type="text/javascript" src="plugins/fullpage/fullpage.min.js"></script> -->
+    <script type="text/javascript" src="plugins/liteswitch/liteswitch.js"></script>
     <script type="text/javascript" src="plugins/litestep/step.js"></script>
+    <script type="text/javascript" src="plugins/bigfile/jquery.fcup.js"></script>
     <script type="text/javascript" src="plugins/sweetalert/sweetalert.js"></script>
+    <script type="text/javascript" src="plugins/md5/md5.js"></script>
 
     <script type="text/javascript" src="control/js/common.js"></script>
     <script type="text/javascript" src="control/js/viewinit.js"></script>

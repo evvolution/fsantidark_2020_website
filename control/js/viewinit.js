@@ -9,7 +9,8 @@ function initMainview(){
         navigation: true,
         navigationPosition: 'right',
         anchors: ['p1', 'p2', 'p3', 'p4', 'p5'],
-        menu: '#fsantidarkMenu'
+        menu: '#fsantidarkMenu',
+        keyboardScrolling: false,
     });
 }
 

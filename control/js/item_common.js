@@ -19,7 +19,7 @@ function init() {
 
     $.ajax({
         type:"get",
-        url: 'http://server3.foshanplus.com/exam/get_vote/?exam_id=34',
+        url: 'https://server.foshanplus.com/exam/get_vote/?exam_id=34',
         success:function(receiver){
             console.log(receiver.projects[0]);
             for(var i = 0; i < receiver.projects[0].length; i++) {
